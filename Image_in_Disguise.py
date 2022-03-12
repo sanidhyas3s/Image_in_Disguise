@@ -1,3 +1,4 @@
+from tkinter import *
 from tkinter import font as tkFont
 from PIL import Image, ImageTk
 from tkinter import filedialog, Tk, Button, Label, messagebox
@@ -83,8 +84,7 @@ def encode_text():
     text_prompt_label = Label(app, text="Enter Text:",
                 bg='lavender', font=("Cascadia Code", 15))
     text_prompt_label.place(x=image_size[0]+3*space, y=12)
-
-
+    app.mainloop()
 
 
 def decode_text():
@@ -141,13 +141,14 @@ def decode_text():
     app.geometry('1485x800')
     main_button = Button(app, text="Select Image to retrieve Text", bg='white', fg='black', command=decrypt)
     main_button.place(x=650, y=10)
+    app.mainloop()
 
 
 def encode_image():
-    
+
     main.destroy()
-    load_image1 = None
-    load_image2 = None
+    #load_image1 = None
+    #load_image2 = None
     size = 720, 720
     space = 15
     width = (2*size[0]+3*space)
@@ -207,7 +208,6 @@ def encode_image():
 
     def encode(image_to_hide, image_to_hide_in):
 
-        global n_bits
         width, height = image_to_hide.size
 
         hide_image = image_to_hide.load()
@@ -252,13 +252,12 @@ def encode_image():
 
     encrypt_button = Button(app, text="ENCRYPT", bg='white', fg='black', width=15, command=lambda : encode(load_image1,load_image2))
     encrypt_button.place(x=width-130, y=10)
-
+    app.mainloop()
 
 
 
 def decode_image():
     main.destroy()
-    load_image1 = None
     size = 720, 720
     space = 15
     width = (2*size[0]+3*space)
@@ -310,14 +309,9 @@ def decode_image():
 
     def decode(enrypted_image):
 
-        global n_bits
         width, height = enrypted_image.size
 
         image_data = enrypted_image.load()
-        '''
-        The Encoded image & decoded one (as a result of it) is not carrying as much information as the original files and is somehow compressed
-        the reason is the image size defined at the beginning of the code
-        '''
         data = []
 
         for y in range(height):
@@ -356,6 +350,7 @@ def decode_image():
 
     encrypt_button = Button(app, text="DECRYPT", bg='white', fg='black', command=lambda : decode(load_image1))
     encrypt_button.place(x=space+150, y=10)
+    app.mainloop()
 
 head_label = Label(main, text="Image in Disguise - Sorted 100",
             bg='lavender', font=("Segoe UI Semibold", 30))
@@ -396,7 +391,7 @@ encbuttonPIP=Button(text='Image in Image Encrypter',fg="black",bg="white",width=
 encbuttonPIP['font'] =font_def 
 encbuttonPIP.place(relx=0.1,rely=0.6)
 
-decbuttonPIP=Button(text='Image in Image Decrypter',fg="black",bg="white",width=25,command=decode_text)
+decbuttonPIP=Button(text='Image in Image Decrypter',fg="black",bg="white",width=25,command=decode_image)
 decbuttonPIP['font'] =font_def 
 decbuttonPIP.place(relx=0.1,rely=0.74)
 main.mainloop()
