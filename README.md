@@ -26,3 +26,9 @@ pip install Pillow
 pip install tk
 
 pip install opencv-python
+
+---------------------
+
+Thanks to the Open Source Community, SDSLabs and also to the below mentioned two amazing YT channels.
+
+We took help from the Youtube Channel of Alfredo Sequeida and a video from Computerphile (https://youtu.be/TWEXCYQKyDc) in understanding the concept of Image Steganography and insights on how to implement the same.
