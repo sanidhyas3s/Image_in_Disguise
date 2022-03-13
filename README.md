@@ -3,19 +3,14 @@
 This is a Team Project made by Sanidhya, Sanidhya, Sannidhy and Jatin ;-)
 (Sorted100)
 
----------------------
 
 This project is made for the hackathon - Syntax Error 2022
 
-pip_encrypt _final.py is Picture in Picture Encrypter
-
-pip_decrypt_final.py is Picture in Picture Decrypter
-
-tip_encrypt.py is Text in Picture Encrypter
-
-tip_decrypt.py is Text in Picture Decrypter
 
 ---------------------
+
+Running the single source code file will give out the application with all the four required options of Text in Image and Image in Image Encryption and Decryption.
+
 
 Running the above python files would need the libraries "numpy", "Pillow" (PIL), "tkinter" and "cv2", the commands to install these are given below:
 
@@ -28,6 +23,7 @@ pip install tk
 pip install opencv-python
 
 ---------------------
+
 
 Thanks to the Open Source Community, SDSLabs and also to the below mentioned two amazing YT channels.
 
