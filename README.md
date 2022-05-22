@@ -1,10 +1,10 @@
 # Image in Disguise
 
-###This is a Team Project made by Sanidhya, Sanidhya, Sannidhy and Jatin ;-)
+### This is a Team Project made by Sanidhya, Sanidhya, Sannidhy and Jatin ;-)
 (Sorted100)
 
 
-####This project is made for the hackathon - Syntax Error 2022
+#### This project is made for the hackathon - Syntax Error 2022
 
 
 ---------------------
@@ -16,11 +16,14 @@ Running the above python files would need the libraries "numpy", "Pillow" (PIL),
 
 ```
 pip install numpy
-
+```
+```
 pip install Pillow
-
+```
+```
 pip install tk
-
+```
+```
 pip install opencv-python
 ```
 
